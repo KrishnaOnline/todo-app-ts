@@ -13,6 +13,10 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/todo", todoRoutes);
 
+app.get('/', (req, res) => {
+    res.send("Server is Up and Running...");
+})
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
